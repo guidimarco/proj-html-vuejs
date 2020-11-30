@@ -1,17 +1,65 @@
-
-/* <1-fold RESET E NORMALIZZAZIONE */
+/* <1-fold --> reset e normalizzazione */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* </1-fold> RESET E NORMALIZZAZIONE */
+/* </1-fold> --> reset e normalizzazione */
+
+/* <1-fold --> all doc style */
+.container {
+    width: 1100px; height: 100%;
+    background-color: white;
+    margin: auto;
+}
+.footer-container {
+    width: 1300px; height: 100%;
+    background-color: white;
+    margin: auto;
+}
+
+/* </1-fold> --> all doc style */
 
 
 /* ---------------- */
 /* ----- HTML ----- */
 /* ---------------- */
+/* <1-fold --> header */
+header {
+    height: 200px;
+    background-color: red;
+}
+header .container {
+    display: flex; justify-content: space-between;
+}
+
+.header-logo, .header-menu {
+    width: 200px; height: 100%;
+    background-color: purple;
+}
+/* </1-fold --> header */
+
+/* <1-fold --> main */
+main {
+    height: 100vh;
+    background-color: green;
+}
+/* </1-fold --> main */
+
+/* <1-fold --> footer */
+footer {
+    height: 100vh;
+    background-color: blue;
+}
+
+.footer-menu,
+.footer-form,
+.footer-info {
+    height: 100px;
+    background-color: orange;
+}
+/* </1-fold --> footer */
 
 /* ----------------------- */
 /* ----- MEDIA QUERY ----- */
