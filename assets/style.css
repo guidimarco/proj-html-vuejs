@@ -1,0 +1,36 @@
+
+/* <1-fold RESET E NORMALIZZAZIONE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* </1-fold> RESET E NORMALIZZAZIONE */
+
+
+/* ---------------- */
+/* ----- HTML ----- */
+/* ---------------- */
+
+/* ----------------------- */
+/* ----- MEDIA QUERY ----- */
+/* ----------------------- */
+
+/* XS */
+@media screen and (min-width: 576px) {
+
+}
+/* SM */
+@media screen and (min-width: 768px) {
+
+}
+/* MD */
+@media screen and (min-width: 992px) {
+
+}
+/* LG */
+@media screen and (min-width: 1200px) {
+
+}
+/* XL */
