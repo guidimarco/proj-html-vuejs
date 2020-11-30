@@ -36,3 +36,7 @@ FOOTER
 DOMANDE
 20201130
 	1	Font: quali uso?
+
+
+DA FARE
+	1 submenu opening hours --> completare

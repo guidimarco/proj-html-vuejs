@@ -29,39 +29,120 @@ var app = new Vue({
                 article: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." // article string
             }, // single-news-obj
         ], // all news: array of new-obj
-        navMenu: [
-            {
-                name: "home",
-                link: "src",
+        htmlNavMenu: [
+            { // NAV MENU
+                name: "navigate",
+                submenu: [ // MAIN MENU
+                    {
+                        name: "home",
+                        src: "",
+                    },
+                    {
+                        name: "alternate home",
+                        src: "",
+                    },
+                    {
+                        name: "order online",
+                        src: "",
+                        submenu: [ // MENU-CATEGORIES
+                            {
+                                name: "appetizers",
+                                src: "",
+                                imgSrc: "",
+                            },
+                            {
+                                name: "burgers",
+                                src: "",
+                                imgSrc: "",
+                            },
+                            {
+                                name: "pizzas",
+                                src: "",
+                                imgSrc: "",
+                            },
+                            {
+                                name: "fries",
+                                src: "",
+                                imgSrc: "",
+                            },
+                            {
+                                name: "sides",
+                                src: "",
+                                imgSrc: "",
+                            },
+                            {
+                                name: "desserts",
+                                src: "",
+                                imgSrc: "",
+                            },
+                            {
+                                name: "beverages",
+                                src: "",
+                                imgSrc: "",
+                            },
+                            {
+                                name: "specials",
+                                src: "",
+                                imgSrc: "",
+                            },
+                        ],
+                    },
+                    {
+                        name: "about",
+                        src: "",
+                    },
+                    {
+                        name: "news",
+                        src: "",
+                    },
+                    {
+                        name: "contact us",
+                        src: "",
+                    },
+                    {
+                        name: "cart",
+                        src: "",
+                    },
+                ],
             },
-            {
-                name: "alternate home",
-                link: "src",
-            },
-            {
-                name: "menu",
+            { // INFO MENU
+                name: "information",
                 submenu: [
-
-                ], // all sub-menu link: array of menu categories
-                link: "src",
+                    {
+                        name: "my account",
+                        src: "",
+                    },
+                    {
+                        name: "terms of service",
+                        src: "",
+                    },
+                    {
+                        name: "privacy policy",
+                        src: "",
+                    },
+                ],
             },
-            {
-                name: "about",
-                link: "src",
+            { // OPENING HOURS MENU
+                name: "opening hours",
+                submenu: [ // SUBMENU: DAY, OPENING HOURS
+                    {
+                        day: "monday",
+                        openingTime: "12",
+                        closingTime: "18",
+                    },
+                ],
             },
-            {
-                name: "news",
-                link: "src",
+            { // VOUCHER MENU
+                name: "voucher",
+                submenu: [
+                    {
+                        name: "first order discount",
+                        src: "",
+                        imgSrc: "",
+                    },
+                ],
             },
-            {
-                name: "contact us",
-                link: "src",
-            },
-            {
-                name: "cart",
-                link: "src",
-            },
-        ], // all menu link: array of obj
+        ], // <-- END htmlNavMenu
     },
     methods: { // for function
 

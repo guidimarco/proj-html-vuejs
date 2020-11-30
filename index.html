@@ -33,7 +33,13 @@
 
                     <!-- RIGHT nav -->
                     <nav class="header-menu">
-                        MENU
+                        <ul>
+                            <li
+                                v-for="item in htmlNavMenu[0].submenu"
+                                v-if="item.name != 'alternate home'">
+                                {{ item.name }}
+                            </li>
+                        </ul>
                     </nav>
                 </div><!-- END container -->
             </header>
@@ -48,7 +54,53 @@
                 <div class="footer-container">
                     <!-- TOP footer menu -->
                     <nav class="footer-menu">
-                        FOOTER MENU
+                        <ul>
+                            <li><!-- order online -->
+                                {{ htmlNavMenu[0].submenu[2].name }}
+                                <ul>
+                                    <li
+                                        v-for="item in htmlNavMenu[0].submenu[2].submenu">
+                                        {{ item.name }}
+                                    </li>
+                                </ul><!-- END submenu -->
+                            </li>
+                            <li><!-- navigate -->
+                                {{ htmlNavMenu[0].name }}
+                                <ul>
+                                    <li
+                                        v-for="item in htmlNavMenu[0].submenu">
+                                        {{ item.name }}
+                                    </li>
+                                </ul><!-- END submenu -->
+                            </li>
+                            <li><!-- information -->
+                                {{ htmlNavMenu[1].name }}
+                                <ul>
+                                    <li
+                                        v-for="item in htmlNavMenu[1].submenu">
+                                        {{ item.name }}
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><!-- opening hours -->
+                                {{ htmlNavMenu[2].name }}
+                                <ul>
+                                    <li
+                                        v-for="item in htmlNavMenu[2].submenu">
+                                        {{ item.day }}
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><!-- voucher -->
+                                {{ htmlNavMenu[3].name }}
+                                <ul>
+                                    <li
+                                        v-for="item in htmlNavMenu[3].submenu">
+                                        {{ item.name }}
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </nav>
 
                     <!-- CX footer input - subscribe -->
