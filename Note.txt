@@ -1,9 +1,9 @@
 MILESTONE
 	milestone 1
 		30/11
-		HTML Creare un layout base
-		JS Individuare ed impostare la struttura dati
-		HTML-JS Renderizzare il menu header e footer prendendo le info dalla struttura
+		X	HTML Creare un layout base
+		X	JS Individuare ed impostare la struttura dati
+		X	HTML-JS Renderizzare il menu header e footer prendendo le info dalla struttura
 
 	milestone 2
 		1/12

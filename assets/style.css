@@ -69,7 +69,17 @@ footer {
     background-color: blue;
 }
 
-.footer-menu,
+.footer-menu > ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.footer-menu > ul > li  {
+    display: block;
+    float: left;
+    width: calc(100% / 5);
+}
+
 .footer-form,
 .footer-info {
     min-height: 100px;
