@@ -1,0 +1,33 @@
+MILESTONE
+	milestone 1
+		30/11
+		HTML Creare un layout base
+		JS Individuare ed impostare la struttura dati
+		HTML-JS Renderizzare il menu header e footer prendendo le info dalla struttura
+
+	milestone 2
+		1/12
+		CSS Rendere layout responsive (senza stilare elementi secondari: hamburger menu, icone, ...)
+		CSS Stilare gli elementi ricorrenti della pagina, fatta eccezione per le card menu e piatti
+		HTML-CSS impostare stile base su tutto il layout
+
+	milestone 3
+		2/12
+		HTML-CSS stilare nel dettaglio header e footer
+
+	milestone 4
+		3/12
+		CSS Stilare le card menu e piatti
+		HTML-CSS stilare restanti sezioni
+
+AVANZAMENTO
+20201130
+	12:00
+		Ricevuto progetto
+		Individuato layout e elementi riccorenti
+	12:30
+		Ipotesi milestone
+
+DOMANDE
+20201130
+	1	Font: quali uso?
