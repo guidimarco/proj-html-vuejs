@@ -20,13 +20,18 @@ MILESTONE
 		CSS Stilare le card menu e piatti
 		HTML-CSS stilare restanti sezioni
 
-AVANZAMENTO
-20201130
-	12:00
-		Ricevuto progetto
-		Individuato layout e elementi riccorenti
-	12:30
-		Ipotesi milestone
+LAYOUT
+HEADER
+	.container
+		.header-logo		nav.header-menu
+MAIN
+	.container
+		section ...
+FOOTER
+	.footer-container
+		.footer-menu
+		.footer-form
+		.footer-info
 
 DOMANDE
 20201130
