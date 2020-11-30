@@ -35,73 +35,73 @@ var app = new Vue({
                 submenu: [ // MAIN MENU
                     {
                         name: "home",
-                        src: "",
+                        href: "#",
                     },
                     {
                         name: "alternate home",
-                        src: "",
+                        href: "#",
                     },
                     {
                         name: "order online",
-                        src: "",
+                        href: "#",
                         submenu: [ // MENU-CATEGORIES
                             {
                                 name: "appetizers",
-                                src: "",
+                                href: "#",
                                 imgSrc: "",
                             },
                             {
                                 name: "burgers",
-                                src: "",
+                                href: "#",
                                 imgSrc: "",
                             },
                             {
                                 name: "pizzas",
-                                src: "",
+                                href: "#",
                                 imgSrc: "",
                             },
                             {
                                 name: "fries",
-                                src: "",
+                                href: "#",
                                 imgSrc: "",
                             },
                             {
                                 name: "sides",
-                                src: "",
+                                href: "#",
                                 imgSrc: "",
                             },
                             {
                                 name: "desserts",
-                                src: "",
+                                href: "#",
                                 imgSrc: "",
                             },
                             {
                                 name: "beverages",
-                                src: "",
+                                href: "#",
                                 imgSrc: "",
                             },
                             {
                                 name: "specials",
-                                src: "",
+                                href: "#",
                                 imgSrc: "",
                             },
                         ],
                     },
                     {
                         name: "about",
-                        src: "",
+                        href: "#",
                     },
                     {
                         name: "news",
-                        src: "",
+                        href: "#",
                     },
                     {
                         name: "contact us",
-                        src: "",
+                        href: "#",
                     },
                     {
                         name: "cart",
-                        src: "",
+                        href: "#",
                     },
                 ],
             },
@@ -110,15 +110,15 @@ var app = new Vue({
                 submenu: [
                     {
                         name: "my account",
-                        src: "",
+                        href: "#",
                     },
                     {
                         name: "terms of service",
-                        src: "",
+                        href: "#",
                     },
                     {
                         name: "privacy policy",
-                        src: "",
+                        href: "#",
                     },
                 ],
             },
@@ -137,7 +137,7 @@ var app = new Vue({
                 submenu: [
                     {
                         name: "first order discount",
-                        src: "",
+                        href: "#",
                         imgSrc: "",
                     },
                 ],
