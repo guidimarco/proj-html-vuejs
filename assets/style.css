@@ -23,13 +23,12 @@ ul {
 /* h2 in main black: popular dish,,, */
 /* h3 app */
 /* h4 title art */
-h5 {
+h5 { /* footer form title */
     letter-spacing: 1px;
     text-transform: capitalize;
     color: #fcd66c;
     font-size: 32px;
 }
-
 
 /* </1-fold> --> reset e normalizzazione */
 
@@ -57,6 +56,10 @@ button.primary {
 }
 button.primary:hover {
     background-color: #bf1e23;
+}
+
+li.active a {
+    color: #fcd66c;
 }
 
 /* </1-fold> --> all doc style */
@@ -98,9 +101,6 @@ header .container {
     padding: 0 10px;
     margin-left: 5px;
     font-size: 19px;
-}
-.header-menu ul li.active a {
-    color: #fcd66c;
 }
 .header-menu ul li.drowpdown-symb a::after {
     content: "\f107";
@@ -146,7 +146,10 @@ footer {
     color: white;
     cursor: default;
     text-align: center;
-    font-weight: bold;
+    font-weight: bold; font-size: 13px;
+}
+.footer-menu > ul > li:last-child  {
+    text-align: center;
 }
 .footer-menu ul ul  {
     margin-top: 20px;
@@ -154,6 +157,28 @@ footer {
 }
 .footer-menu ul ul li  {
     margin-top: 15px;
+}
+.footer-menu ul ul li.app-link:last-child {
+    margin-top: 5px;
+}
+.footer-menu ul ul li.app-link img {
+    width: 90%;
+    max-width: 120px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.footer-menu ul ul li.first-order img {
+    width: 90%;
+    max-width: 180px;
+}
+.footer-menu ul ul li.first-order p {
+    margin-top: 10px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.footer-menu ul ul li.first-order span.highlight {
+    text-transform: uppercase;
+    color: #fcd66c;
 }
 
 .footer-form {

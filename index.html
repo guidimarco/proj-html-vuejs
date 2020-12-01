@@ -84,8 +84,9 @@
                                 {{ htmlNavMenu[0].name }}
                                 <ul>
                                     <li
-                                        v-for="item in htmlNavMenu[0].submenu">
-                                        <a :href="item.href">{{ item.name }}</a>
+                                        v-for="item in htmlNavMenu[0].submenu"
+                                        :class="item.name == 'home' ? 'active' : ''">
+                                        <a :href="item.href">{{ item.name != 'order online' ? item.name : 'menu' }}</a>
                                     </li>
                                 </ul><!-- END submenu -->
                             </li>
@@ -95,6 +96,17 @@
                                     <li
                                         v-for="item in htmlNavMenu[1].submenu">
                                         <a :href="item.href">{{ item.name }}</a>
+                                    </li>
+                                    <!-- app link imgs -->
+                                    <li class="app-link">
+                                        <a href="#">
+                                            <img src="assets/img/app/app-store-badge-200x67.png" alt="app store">
+                                        </a>
+                                    </li>
+                                    <li class="app-link">
+                                        <a href="#">
+                                            <img src="assets/img/app/play-store-badge-200x67.png" alt="play store">
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
@@ -111,8 +123,14 @@
                                 {{ htmlNavMenu[3].name }}
                                 <ul>
                                     <li
-                                        v-for="item in htmlNavMenu[3].submenu">
-                                        <a :href="item.href">{{ item.name }}</a>
+                                        v-for="item in htmlNavMenu[3].submenu"
+                                        :class="item.name == 'first order' ? 'first-order' : ''">
+                                        <img v-if="item.imgSrc" :src="item.imgSrc" :alt="item.name">
+                                        <a :href="item.href"
+                                            v-if="item.name != 'first order'">{{ item.name }}</a>
+                                        <p v-else>
+                                            just use the code <span class="highlight">firstorder</span></br> at checkout
+                                        </p>
                                     </li>
                                 </ul>
                             </li>

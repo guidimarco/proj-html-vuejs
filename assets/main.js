@@ -136,9 +136,9 @@ var app = new Vue({
                 name: "voucher",
                 submenu: [
                     {
-                        name: "first order discount",
+                        name: "first order",
                         href: "#",
-                        imgSrc: "",
+                        imgSrc: "assets/img/first_order/footer-coupon-200x200.png",
                     },
                 ],
             },

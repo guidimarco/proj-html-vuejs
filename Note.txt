@@ -13,17 +13,17 @@ MILESTONE
 
 	milestone 3
 		2/12
-		HTML-CSS stilare nel dettaglio header e footer
+		X	HTML-CSS stilare nel dettaglio header e footer
 
 	milestone 4
 		3/12
-		CSS Stilare le card menu e piatti
 		HTML-CSS stilare restanti sezioni
+		CSS Stilare le card menu e piatti
 
 	milestone 5
 		3/12 ?
 		HTML-JS inserire date nel submenu opening hours e renderizzate l'orario corretto
-		HTML-JS inserire classe active dinamicamente nel menu
+		HTML-JS inserire classe active dinamicamente nel menu header e footer
 
 LAYOUT
 HEADER
