@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
         <!-- responsive -->
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- CSS link -->
         <link rel="stylesheet" href="assets/style.css">
@@ -39,10 +39,21 @@
                         <ul>
                             <li
                                 v-for="item in htmlNavMenu[0].submenu"
-                                v-if="item.name != 'alternate home'">
-                                <a :href="item.href">{{ item.name }}</a>
+                                v-if="item.name != 'alternate home'"
+                                :class="item.name == 'home' ? 'active drowpdown-symb' : ''">
+                                <a :href="item.href"
+                                    v-if="item.name != 'cart'">{{ item.name }}</a>
+                                <!-- cart symbol -->
+                                <a href="#" v-else>
+                                    <i class='fas fa-shopping-cart'></i>
+                                </a>
                             </li>
                         </ul>
+
+                        <!-- hamburger-menu-icon -->
+                        <div class="hamburger-menu">
+                            <i class="fas fa-bars fa-2x"></i>
+                        </div>
                     </nav>
                 </div><!-- END container -->
             </header>
@@ -126,8 +137,6 @@
                             <i class="fab fa-youtube"></i>
                             <i class="far fa-envelope"></i>
                         </div><!-- END social icon -->
-
-
                     </div>
                 </div><!-- END footer-container -->
             </footer>

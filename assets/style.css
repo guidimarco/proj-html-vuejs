@@ -24,12 +24,12 @@ ul {
 
 /* <1-fold --> all doc style */
 .container {
-    width: 80%; max-width: 1100px;
+    width: 90%; max-width: 1200px;
     /* background-color: pink; */
     margin: auto;
 }
 .footer-container {
-    width: 90%; max-width: 1300px;
+    width: 95%; max-width: 1300px;
     /* background-color: white; */
     margin: auto;
 }
@@ -54,13 +54,31 @@ header .container {
     height: 130px;
 }
 
+/* hamburger-menu */
+.header-menu .hamburger-menu i {
+    color: white;
+    line-height: 130px;
+}
+.header-menu > ul {
+    display: none;
+}
 .header-menu ul li {
     display: inline-block;
 }
 .header-menu ul li a {
     display: inline-block;
     line-height: 130px;
-    padding: 0 20px;
+    padding: 0 10px;
+    margin-left: 5px;
+    font-size: 19px;
+}
+.header-menu ul li.active a {
+    color: #fcd66c;
+}
+.header-menu ul li.drowpdown-symb a::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
     margin-left: 10px;
 }
 
@@ -75,7 +93,6 @@ main {
 
 /* <1-fold --> footer */
 footer {
-    height: 100vh;
     background-color: black;
 }
 
@@ -86,10 +103,11 @@ footer {
 }
 .footer-menu > ul > li  {
     display: block; float: left;
-    width: calc(100% / 5);
+    width: 100%;
     text-transform: uppercase;
     color: white;
     cursor: default;
+    text-align: center;
 }
 
 .footer-form {
@@ -117,14 +135,25 @@ footer {
 }
 /* SM */
 @media screen and (min-width: 768px) {
-
+    .footer-menu > ul > li  {
+        width: calc(100% / 5);
+        text-align: left;
+    }
 }
 /* MD */
 @media screen and (min-width: 992px) {
-
+    nav.header-menu > ul {
+        display: block;
+    }
+    nav.header-menu > .hamburger-menu {
+        display: none;
+    }
 }
 /* LG */
 @media screen and (min-width: 1200px) {
-
+    .header-menu ul li a {
+        padding: 0 20px;
+        margin-left: 10px;
+    }
 }
 /* XL */
