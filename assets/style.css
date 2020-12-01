@@ -6,11 +6,11 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Barlow', 'Open Sans', sans-serif;
     font-weight: 400;
 }
 a {
-    font-family: 'Barlow'; font-weight: 700;
+    font-weight: 700;
     text-decoration: none; text-transform: capitalize;
     color: white;
 }
@@ -19,7 +19,17 @@ ul {
     list-style-type: none;
 }
 
-/* h1 in cover */
+h1 { /* main title --> cover section */
+    letter-spacing: -4px;
+    text-transform: capitalize;
+    line-height: 85px;
+    color: #ffffff;
+    font-size: 90px;
+    margin-bottom: 30px;
+}
+h1 span {
+    color: #fcd66c;
+}
 /* h2 in main black: popular dish,,, */
 /* h3 app */
 /* h4 title art */
@@ -119,8 +129,19 @@ section.cover {
     background-image: url("img/cover-background.jpg");
     background-size: cover;
     background-position: center;
-    padding-top: 170px;
+    text-transform: capitalize;
+    font-size: 45px; color: #ffffff;
 }
+section.cover .container {
+    min-height: 100vh;
+    padding-top: 170px;
+    display: flex; flex-direction: column;
+    justify-content: center;
+}
+section.cover button {
+    align-self: flex-start;
+}
+
 /* #/2-fold section.cover*/
 
 /* </1-fold --> main */
@@ -190,6 +211,7 @@ footer {
     margin-bottom: 40px;
 }
 .footer-form p {
+    font-family: 'Open Sans';
     margin: 20px 0 40px;
 }
 .footer-form input,

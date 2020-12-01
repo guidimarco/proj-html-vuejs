@@ -59,10 +59,25 @@
             </header>
 
             <main>
+                <!-- main section: cover page -->
                 <section class="cover">
                     <div class="container">
-                        title!!
+                        <span>hungry?</span>
+                        <h1>
+                            <span>great food</span><br/>
+                            delivered
+                        </h1>
+                        <button class="primary" type="button" name="button">view our menu
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                        </button>
                     </div><!-- END container -->
+                </section>
+
+                <!-- section: popular dishes -->
+                <section class="pop-dishes">
+                    <div class="container">
+                        
+                    </div>
                 </section>
             </main>
 
@@ -129,7 +144,7 @@
                                         <a :href="item.href"
                                             v-if="item.name != 'first order'">{{ item.name }}</a>
                                         <p v-else>
-                                            just use the code <span class="highlight">firstorder</span></br> at checkout
+                                            just use the code <span class="highlight">firstorder</span><br/> at checkout
                                         </p>
                                     </li>
                                 </ul>
