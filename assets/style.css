@@ -34,6 +34,20 @@ ul {
     margin: auto;
 }
 
+button.primary {
+    text-transform: uppercase; letter-spacing: 2px;
+    padding: 13px 29px;
+    line-height: 17px; font-size: 14px;
+    border-radius: 50px; border: 0px;
+    background-color: #cc1a26; color: #ffffff;
+    font-family: Barlow; font-weight: 700;
+    cursor: pointer;
+    outline: 0px;
+}
+button.primary:hover {
+    background-color: #bf1e23;
+}
+
 /* </1-fold> --> all doc style */
 
 

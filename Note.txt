@@ -9,7 +9,7 @@ MILESTONE
 		1/12
 		X	HTML-CSS impostare stile base su tutto il layout
 		X	CSS Rendere layout responsive (senza stilare elementi secondari: hamburger menu, icone, ...)
-		CSS Stilare gli elementi ricorrenti della pagina, fatta eccezione per le card menu e piatti
+		X	CSS Stilare gli elementi ricorrenti della pagina, fatta eccezione per le card menu e piatti
 
 	milestone 3
 		2/12
