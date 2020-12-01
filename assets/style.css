@@ -19,6 +19,17 @@ ul {
     list-style-type: none;
 }
 
+/* h1 in cover */
+/* h2 in main black: popular dish,,, */
+/* h3 app */
+/* h4 title art */
+h5 {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: #fcd66c;
+    font-size: 32px;
+}
+
 
 /* </1-fold> --> reset e normalizzazione */
 
@@ -57,7 +68,9 @@ button.primary:hover {
 /* <1-fold --> header */
 header {
     padding-top: 40px;
-    background-color: black;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
 }
 header .container {
     display: flex; justify-content: space-between;
@@ -99,15 +112,26 @@ header .container {
 /* </1-fold --> header */
 
 /* <1-fold --> main */
-main {
-    height: 100vh;
-    background-color: green;
+
+/* #2-fold section.cover*/
+section.cover {
+    height: 100vh; min-height: 800px;
+    background-image: url("img/cover-background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 170px;
 }
+/* #/2-fold section.cover*/
+
 /* </1-fold --> main */
 
 /* <1-fold --> footer */
 footer {
-    background-color: black;
+    min-height: 800px;
+    background-image: url("img/footer-background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 70px 120px 140px;
 }
 
 .footer-menu > ul::after {
@@ -122,6 +146,14 @@ footer {
     color: white;
     cursor: default;
     text-align: center;
+    font-weight: bold;
+}
+.footer-menu ul ul  {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.footer-menu ul ul li  {
+    margin-top: 15px;
 }
 
 .footer-form {
@@ -129,13 +161,42 @@ footer {
     align-items: center;
     text-align: center; color: white;
 }
+.footer-form img {
+    margin-bottom: 40px;
+}
+.footer-form p {
+    margin: 20px 0 40px;
+}
+.footer-form input,
+.footer-form button {
+    width: 80%;
+    max-width: 600px;
+}
+.footer-form input {
+    padding: 13px 29px;
+    line-height: 17px; font-size: 14px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    outline: 0px;
+    margin-bottom: 20px;
+}
 
+.footer-info {
+    text-align: center;
+}
 .footer-info .social {
     text-align: center;
+    margin: 40px 0;
 }
 .footer-info .social i {
     color: white;
     cursor: pointer;
+    margin: 0 10px;
+}
+.footer-info span {
+    font-size: 12px;
+    color: #fcd66c;
+    font-weight: bold;
 }
 /* </1-fold --> footer */
 
