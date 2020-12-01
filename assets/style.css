@@ -241,8 +241,29 @@ section.app {
     padding: 130px 0 100px;
 }
 
-
 /* #/2-fold section.app */
+
+/* #2-fold section.news */
+section.news {
+    height: 100vh;
+    background-color: purple;
+}
+.news .news-container {
+    height: 200px;
+    background-color: orange;
+}
+.news .news-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.news .news-container .single-news {
+    width: calc(100% / 2); height: 50px;
+    float: left;
+    background-color: pink;
+}
+
+/* #/2-fold section.news */
 
 /* </1-fold --> main */
 
