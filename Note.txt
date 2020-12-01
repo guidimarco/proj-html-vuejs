@@ -42,8 +42,5 @@ FOOTER
 
 DOMANDE
 20201130
-	1	Font: quali uso?
-
-
-DA FARE
-	1 submenu opening hours --> completare
+	1	Struttura dati --> menu è corretta?
+	2	Sezione discount --> effetto onda?

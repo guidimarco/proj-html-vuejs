@@ -76,7 +76,66 @@
                 <!-- section: popular dishes -->
                 <section class="pop-dishes">
                     <div class="container">
+                        <div class="info-container">
+                            <div class="info-card"
+                                v-for="i in 4"
+                            ></div>
+                        </div><!-- end info-container -->
+
+                        <h2>our most popular dishes</h2>
+
+                        <div class="dish-card-container">
+                            <div class="dish-card"
+                                v-for="i in 3"
+                            ></div>
+                        </div><!-- end card-container -->
+
+                        <button class="primary" type="button" name="button">start your order
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- section: voucher discount -->
+                <section class="voucher">
+                    <div class="container"></div>
+                </section>
+
+                <!-- section: menu -->
+                <section class="menu">
+                    <div class="container">
+                        <h2>menu categories</h2>
+
+                        <button class="primary" type="button" name="button">view the full menu
+                            <i class="fas fa-arrow-alt-circle-right"></i>
+                        </button>
+
+                        <div class="menu-container">
+                            <div class="menu-cat"
+                                v-for="i in 8"
+                            >CARD</div>
+                        </div><!-- end menu-card-container -->
+
+                        <div class="menu-info">
+                            <div class="info"
+                                v-for="i in 4"
+                            >info</div>
+                        </div><!-- end menu-info -->
+                    </div>
+                </section>
+
+                <!-- section: app -->
+                <section class="app">
+                    <div class="container">
+                        <h3>menu categories</h3>
                         
+                        <!-- link app store -->
+                        <a href="#">
+                            <img src="assets/img/app/app-store-badge-200x67.png" alt="app store">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/app/play-store-badge-200x67.png" alt="play store">
+                        </a>
                     </div>
                 </section>
             </main>

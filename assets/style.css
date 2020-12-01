@@ -19,7 +19,7 @@ ul {
     list-style-type: none;
 }
 
-h1 { /* main title --> cover section */
+h1 { /* index-title --> cover section */
     letter-spacing: -4px;
     text-transform: capitalize;
     line-height: 85px;
@@ -30,7 +30,10 @@ h1 { /* main title --> cover section */
 h1 span {
     color: #fcd66c;
 }
-/* h2 in main black: popular dish,,, */
+h2 { /* main-title */
+    font-size: 50px;
+    text-transform: capitalize;
+}
 /* h3 app */
 /* h4 title art */
 h5 { /* footer form title */
@@ -142,7 +145,104 @@ section.cover button {
     align-self: flex-start;
 }
 
+section.pop-dishes {
+    padding-bottom: 30px;
+}
+.pop-dishes .container {
+    display: flex; flex-direction: column;
+    align-items: center;
+}
+.pop-dishes .info-container {
+    align-self: stretch;
+    height: 100px;
+    background-color: white;
+    position: relative;
+    transform: translateY(-50%);
+}
+.pop-dishes .info-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.pop-dishes .info-container .info-card {
+    background-color: green;
+    width: calc(100% / 4); height: 100px;
+    float: left;
+}
+.pop-dishes .dish-card-container {
+    background-color: red;
+    margin: 20px 0;
+    height: 100px; width: 100%;
+}
+.pop-dishes .dish-card-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.pop-dishes .dish-card-container .dish-card {
+    background-color: blue;
+    width: calc(100% / 3); height: 100px;
+    float: left;
+}
+
 /* #/2-fold section.cover*/
+
+/* #2-fold section.voucher */
+section.voucher {
+    height: 320px;
+    background-image: url("img/first_order/first-order-background-scaled.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* #/2-fold section.voucher */
+
+/* #2-fold section.menu */
+section.menu {
+    height: 100vh;
+    background-color: purple;
+}
+.menu .menu-container {
+    height: 200px;
+    background-color: orange;
+}
+.menu .menu-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.menu .menu-container .menu-cat {
+    width: calc(100% / 4); height: 50px;
+    float: left;
+    background-color: pink;
+}
+.menu .menu-info {
+    height: 200px;
+    background-color: gray;
+}
+.menu .menu-info::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.menu .menu-info .info {
+    width: calc(100% / 4); height: 50px;
+    float: left;
+    background-color: yellow;
+}
+
+/* #/2-fold section.menu */
+
+/* #2-fold section.app */
+section.app {
+    background-image: url("img/app/app-ordering-scaled.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 130px 0 100px;
+}
+
+
+/* #/2-fold section.app */
 
 /* </1-fold --> main */
 
