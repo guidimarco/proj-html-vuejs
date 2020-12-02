@@ -4,24 +4,73 @@ var app = new Vue({
     data: {
         dishes: [
             {
-                name: "nome", // dish name
+                name: "skin on fries", // dish name
                 info: {
                     vegetarian: true,
                     glutenFree: true,
                     dairyFree: true,
                     Keto: true,
                 }, // dish info obj --> info: true/false
-                prices: [
+                prices: [ // size and price
                     {
                         size: "small",
                         price: 3.00,
-                    }, // single price obj
+                    },
+                    {
+                        size: "medium",
+                        price: 4.50,
+                    },
+                    {
+                        size: "large",
+                        price: 6.00,
+                    },
                 ], // all prices: array of obj (price and size)
                 menuCategories: [
-                    "category",
+                    "fries",
                 ], // all category: array of string (#"appetazer")
                 quantity: 0, // number of item in cart
-            }, // single-dish-obj
+                popular: true,
+            }, // skin on fries
+            {
+                name: "choco cookie frappe", // dish name
+                info: {
+                    vegetarian: true,
+                    glutenFree: true,
+                    dairyFree: false,
+                    Keto: true,
+                }, // dish info obj --> info: true/false
+                prices: [ // size and price
+                    {
+                        size: "200 mL",
+                        price: 4.99,
+                    },
+                ], // all prices: array of obj (price and size)
+                menuCategories: [
+                    "beverages",
+                ], // all category: array of string (#"appetazer")
+                quantity: 0, // number of item in cart
+                popular: true,
+            }, // choco cookie frappe
+            {
+                name: "the donut burger", // dish name
+                info: {
+                    vegetarian: false,
+                    glutenFree: false,
+                    dairyFree: false,
+                    Keto: true,
+                }, // dish info obj --> info: true/false
+                prices: [ // size and price
+                    {
+                        size: "medium",
+                        price: 6.99,
+                    },
+                ], // all prices: array of obj (price and size)
+                menuCategories: [
+                    "burgers",
+                ], // all category: array of string (#"appetazer")
+                quantity: 0, // number of item in cart
+                popular: true,
+            }, // donut burger
         ], // all dishes: array of dish-obj
         news: [
             {

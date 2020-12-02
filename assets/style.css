@@ -36,7 +36,10 @@ h2 { /* main-title */
     text-transform: capitalize;
 }
 /* h3 app */
-/* h4 title art */
+h4 { /* dish-title, news-title */
+    font-size: 32px;
+    color: #555454;
+}
 h5 { /* footer form title */
     letter-spacing: 1px;
     text-transform: capitalize;
@@ -183,19 +186,13 @@ section.pop-dishes {
 }
 
 .pop-dishes .dish-card-container {
-    background-color: red;
+    width: 100%; display: flex;
     margin: 20px 0;
-    height: 100px; width: 100%;
-}
-.pop-dishes .dish-card-container::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 .pop-dishes .dish-card-container .dish-card {
     background-color: blue;
-    width: calc(100% / 3); height: 100px;
-    float: left;
+    height: 100px;
+    flex-grow: 1;
 }
 
 /* #/2-fold section.pop-dishes*/
