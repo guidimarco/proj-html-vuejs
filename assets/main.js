@@ -15,15 +15,15 @@ var app = new Vue({
                 prices: [ // size and price
                     {
                         size: "small",
-                        price: 3.00,
+                        price: "3.00",
                     },
                     {
                         size: "medium",
-                        price: 4.50,
+                        price: "4.50",
                     },
                     {
                         size: "large",
-                        price: 6.00,
+                        price: "6.00",
                     },
                 ], // all prices: array of obj (price and size)
                 menuCategories: [
@@ -44,7 +44,7 @@ var app = new Vue({
                 prices: [ // size and price
                     {
                         size: "200 mL",
-                        price: 4.99,
+                        price: "4.99",
                     },
                 ], // all prices: array of obj (price and size)
                 menuCategories: [
@@ -65,7 +65,7 @@ var app = new Vue({
                 prices: [ // size and price
                     {
                         size: "medium",
-                        price: 6.99,
+                        price: "6.99",
                     },
                 ], // all prices: array of obj (price and size)
                 menuCategories: [
@@ -208,7 +208,20 @@ var app = new Vue({
         ], // <-- END icon restaurant features
     },
     methods: { // for function
-
+        stampPrices: function(pricesArray) {
+            let thisPrice = "";
+            if (!pricesArray.length || pricesArray == undefined) {
+                // if there is no price
+                thisPrice = "n.d.";
+            } else if (pricesArray.length == 1) {
+                thisPrice = "$ " + pricesArray[0].price;
+            } else {
+                let min = pricesArray[0].price;
+                let max = pricesArray[pricesArray.length-1].price;
+                thisPrice = "$ " + min + " - $ " + max;
+            }
+            return thisPrice;
+        },
     }
 
 

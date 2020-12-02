@@ -93,7 +93,7 @@
                                 v-if="dish.popular">
                                 <img :src="dish.imgSrc" :alt="dish.name">
                                 <h4>{{ dish.name }}</h4>
-                                <span>prezzo</span>
+                                <span>{{ stampPrices(dish.prices) }}</span>
                             </div>
                         </div><!-- end card-container -->
 
