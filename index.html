@@ -151,10 +151,12 @@
                             </div>
                         </div><!-- end menu-card-container -->
 
-                        <div class="menu-info">
-                            <div class="info"
-                                v-for="i in 4"
-                            >info</div>
+                        <div class="menu-container">
+                            <div class="menu-cat allergy"
+                                v-for="(allergy, name) in allergies">
+                                <img :src="allergy.imgSrc" :alt="name">
+                                <span>{{ name }}</span>
+                            </div>
                         </div><!-- end menu-info -->
                     </div>
                 </section>
@@ -162,7 +164,8 @@
                 <!-- section: app -->
                 <section class="app">
                     <div class="container">
-                        <h3>menu categories</h3>
+                        <span>download our</span>
+                        <h3>ordering app</h3>
 
                         <!-- link app store -->
                         <a href="#">
@@ -177,16 +180,19 @@
                 <!-- section: news -->
                 <section class="news">
                     <div class="container">
-                        <h2>latest news</h2>
+                        <div class="title">
+                            <h2>latest news</h2>
 
-                        <button class="primary" type="button" name="button">read more news
-                            <i class="fas fa-arrow-alt-circle-right"></i>
-                        </button>
+                            <button class="primary" type="button" name="button">read more news
+                                <i class="fas fa-arrow-alt-circle-right"></i>
+                            </button>
+                        </div><!-- END title -->
 
                         <div class="news-container">
                             <div class="single-news"
-                            v-for="i in 2"
-                            >NEWS</div>
+                                v-for="i in 2">
+                                
+                            </div>
                         </div><!-- end news-container -->
                     </div>
                 </section>

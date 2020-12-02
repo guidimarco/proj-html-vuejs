@@ -34,8 +34,15 @@ h1 span {
 h2 { /* main-title */
     font-size: 50px;
     text-transform: capitalize;
+    margin-bottom: 40px;
 }
-/* h3 app */
+h3 { /* app-title */
+    font-size: 90px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    color: #fcd66c;
+    margin-bottom: 60px;
+}
 h4 { /* dish-title, news-title */
     font-size: 32px; font-weight: normal;
     text-transform: capitalize; text-align: center;
@@ -91,6 +98,7 @@ header {
     padding-top: 40px;
     background-color: transparent;
     position: absolute;
+    z-index: 1;
     width: 100%;
 }
 header .container {
@@ -260,9 +268,12 @@ section.menu {
     justify-content: space-between;
 }
 .menu .title button {
-    align-self: center;
+    align-self: flex-start;
 }
 
+.menu .menu-container {
+    margin: 0 -10px;
+}
 .menu .menu-container::after {
     content: "";
     display: table;
@@ -280,24 +291,19 @@ section.menu {
     text-transform: uppercase;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.menu .menu-info {
-    height: 200px;
-    background-color: gray;
+.menu .menu-container .menu-cat.allergy {
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
 }
-.menu .menu-info::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.menu .menu-info .info {
-    width: calc(100% / 4); height: 50px;
-    float: left;
-    background-color: yellow;
+.menu .menu-container .menu-cat.allergy span {
+    text-transform: capitalize;
+    font-size: 20px;
 }
 
 /* #/2-fold section.menu */
@@ -310,16 +316,34 @@ section.app {
     padding: 130px 0 100px;
 }
 
+.app span {
+    color: white;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.app img {
+    width: 150px;
+    margin-right: 20px;
+}
+
 /* #/2-fold section.app */
 
 /* #2-fold section.news */
 section.news {
-    height: 100vh;
-    background-color: purple;
+    padding: 100px 0;
 }
+
+.news .title {
+    display: flex;
+    justify-content: space-between;
+}
+.news .title button {
+    align-self: flex-start;
+}
+
 .news .news-container {
-    height: 200px;
-    background-color: orange;
+    margin: 0 -15px;
 }
 .news .news-container::after {
     content: "";
@@ -327,9 +351,10 @@ section.news {
     clear: both;
 }
 .news .news-container .single-news {
-    width: calc(100% / 2); height: 50px;
+    width: calc(100% / 2 - 30px); height: 200px;
     float: left;
-    background-color: pink;
+    margin: 15px;
+    background-color: red;
 }
 
 /* #/2-fold section.news */

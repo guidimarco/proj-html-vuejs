@@ -206,6 +206,20 @@ var app = new Vue({
                 text: "fast delivery",
             },
         ], // <-- END icon restaurant features
+        allergies: {
+            "vegetarian": {
+                imgSrc: "assets/img/allergy/vegetarian.png",
+            },
+            "gluten free": {
+                imgSrc: "assets/img/allergy/gluten.png",
+            },
+            "dairy free": {
+                imgSrc: "assets/img/allergy/dairy.png",
+            },
+            "keto friendly": {
+                imgSrc: "assets/img/allergy/keto.png",
+            },
+        }, // <-- END allergy and intollerance-info
     },
     methods: { // for function
         stampPrices: function(pricesArray) {
