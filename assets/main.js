@@ -95,35 +95,35 @@ var app = new Vue({
                     submenu: { // menu-categories submenu
                         "appetizers": {
                             href: "#",
-                            imgSrc: "",
+                            bcgImg: "background-image: url(assets/img/cat/appetizers-menu-background.jpg);",
                         },
                         "burgers": {
                             href: "#",
-                            imgSrc: "",
+                            bcgImg: "background-image: url(assets/img/cat/burgers-menu-background.jpg);",
                         },
                         "pizzas": {
                             href: "#",
-                            imgSrc: "",
+                            bcgImg: "background-image: url(assets/img/cat/pizza-menu-background.jpg);",
                         },
                         "fries": {
                             href: "#",
-                            imgSrc: "",
+                            bcgImg: "background-image: url(assets/img/cat/fries-menu-background.jpg);",
                         },
                         "sides": {
                             href: "#",
-                            imgSrc: "",
+                            bcgImg: "background-image: url(assets/img/cat/sides-menu-background.jpg);",
                         },
                         "desserts": {
                             href: "#",
-                            imgSrc: "",
+                            bcgImg: "background-image: url(assets/img/cat/desserts-menu-background.jpg);",
                         },
                         "beverages": {
                             href: "#",
-                            imgSrc: "",
+                            bcgImg: "background-image: url(assets/img/cat/beverages-menu-background.jpg);",
                         },
                         "specials": {
                             href: "#",
-                            imgSrc: "",
+                            bcgImg: "background-image: url(assets/img/cat/specials-menu-background.jpg);",
                         },
                     },
                 },

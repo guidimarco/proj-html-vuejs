@@ -133,16 +133,22 @@
                 <!-- section: menu -->
                 <section class="menu">
                     <div class="container">
-                        <h2>menu categories</h2>
+                        <div class="title">
+                            <h2>menu categories</h2>
 
-                        <button class="primary" type="button" name="button">view the full menu
-                            <i class="fas fa-arrow-alt-circle-right"></i>
-                        </button>
+                            <button class="primary" type="button" name="button">view the full menu
+                                <i class="fas fa-arrow-alt-circle-right"></i>
+                            </button>
+                        </div><!-- END title -->
 
                         <div class="menu-container">
                             <div class="menu-cat"
-                                v-for="i in 8"
-                            >CARD</div>
+                                v-for="(menu, name) in navMenu.navigate['order online'].submenu"
+                                :style="menu.bcgImg">
+                                <a :href="menu.href">
+                                    {{ name }}
+                                </a>
+                            </div>
                         </div><!-- end menu-card-container -->
 
                         <div class="menu-info">
