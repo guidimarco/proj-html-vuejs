@@ -70,24 +70,27 @@
                         <button class="primary" type="button" name="button">view our menu
                             <i class="fas fa-arrow-alt-circle-right"></i>
                         </button>
+
+                        <!-- info card-container -->
+                        <div class="feat-container">
+                            <div class="info-card"
+                                v-for="info in restFeatures">
+                                <i :class="info.icon"></i>
+                                <span>{{ info.text }}</span>
+                            </div>
+                        </div><!-- end info-container -->
                     </div><!-- END container -->
                 </section>
 
                 <!-- section: popular dishes -->
                 <section class="pop-dishes">
                     <div class="container">
-                        <div class="info-container">
-                            <div class="info-card"
-                                v-for="i in 4"
-                            ></div>
-                        </div><!-- end info-container -->
-
                         <h2>our most popular dishes</h2>
 
                         <div class="dish-card-container">
                             <div class="dish-card"
                                 v-for="i in 3"
-                            ></div>
+                            >ciao</div>
                         </div><!-- end card-container -->
 
                         <button class="primary" type="button" name="button">start your order

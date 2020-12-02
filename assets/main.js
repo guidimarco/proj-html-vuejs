@@ -136,6 +136,24 @@ var app = new Vue({
                 },
             },
         }, // <-- END all navMenu
+        restFeatures: [
+            {
+                icon: "far fa-clock",
+                text: "24/7 delivery",
+            },
+            {
+                icon: "fas fa-hamburger",
+                text: "over 100 dishes",
+            },
+            {
+                icon: "fas fa-mobile-alt",
+                text: "in app ordering",
+            },
+            {
+                icon: "fas fa-car",
+                text: "fast delivery",
+            },
+        ], // <-- END icon restaurant features
     },
     methods: { // for function
 

@@ -13,6 +13,7 @@ a {
     font-weight: 700;
     text-decoration: none; text-transform: capitalize;
     color: white;
+    cursor: pointer;
 }
 
 ul {
@@ -128,7 +129,6 @@ header .container {
 
 /* #2-fold section.cover*/
 section.cover {
-    height: 100vh; min-height: 800px;
     background-image: url("img/cover-background.jpg");
     background-size: cover;
     background-position: center;
@@ -136,39 +136,52 @@ section.cover {
     font-size: 45px; color: #ffffff;
 }
 section.cover .container {
-    min-height: 100vh;
-    padding-top: 170px;
+    height: calc(100vh + 50px);
+    padding-top: 170px; padding-bottom: 50px;
     display: flex; flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 section.cover button {
     align-self: flex-start;
 }
 
+.cover .feat-container {
+    align-self: stretch; height: 100px;
+    background-color: white;
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    transform: translateY(50%);
+    display: flex;
+}
+.cover .feat-container .info-card {
+    height: 100px; flex-grow: 1;
+    font-size: 16px;
+    display: flex;
+    justify-content: center; align-items: center;
+    color: black;
+    line-height: 20px;
+}
+.cover .feat-container .info-card span {
+    color: #555454;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+/* #/2-fold section.cover*/
+
+/* #2-fold section.pop-dishes*/
 section.pop-dishes {
-    padding-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 50px;
 }
 .pop-dishes .container {
     display: flex; flex-direction: column;
     align-items: center;
 }
-.pop-dishes .info-container {
-    align-self: stretch;
-    height: 100px;
-    background-color: white;
-    position: relative;
-    transform: translateY(-50%);
-}
-.pop-dishes .info-container::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.pop-dishes .info-container .info-card {
-    background-color: green;
-    width: calc(100% / 4); height: 100px;
-    float: left;
-}
+
 .pop-dishes .dish-card-container {
     background-color: red;
     margin: 20px 0;
@@ -185,7 +198,7 @@ section.pop-dishes {
     float: left;
 }
 
-/* #/2-fold section.cover*/
+/* #/2-fold section.pop-dishes*/
 
 /* #2-fold section.voucher */
 section.voucher {

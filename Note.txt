@@ -21,11 +21,15 @@ MILESTONE
 		CSS Stilare le card menu e piatti
 
 	milestone 5
-		3/12 ?
-		HTML-JS inserire date nel submenu opening hours e renderizzate l'orario corretto
+		3/12
+		X	HTML-JS inserire date nel submenu opening hours e renderizzate l'orario corretto
 		HTML-JS inserire classe active dinamicamente nel menu header e footer
 		HTML-JS inserire dish e stampare i most popular
 		HTML-JS inserire news e stamparle
+
+	milestone 6
+		3/12
+		HTML-CSS ritocchi: footer menu opening hours, input footer
 
 LAYOUT
 HEADER
@@ -39,8 +43,3 @@ FOOTER
 		.footer-menu
 		.footer-form
 		.footer-info
-
-DOMANDE
-20201130
-	1	Struttura dati --> menu è corretta?
-	2	Sezione discount --> effetto onda?
