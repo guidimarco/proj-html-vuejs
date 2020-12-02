@@ -192,11 +192,45 @@ section.pop-dishes {
 }
 .pop-dishes .dish-card-container .dish-card {
     flex-grow: 1;
-    padding: 15px;
+    margin: 15px;
 }
-.pop-dishes .dish-card-container .dish-card img {
+
+/* img and overlay */
+.pop-dishes .dish-card-container .card-img {
+    position: relative;
+}
+.pop-dishes .dish-card-container .card-img img {
     width: 100%;
 }
+.pop-dishes .dish-card-container .card-img .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    backdrop-filter: saturate(80%);
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 3px;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    opacity: 0;
+    transition: all 1s;
+}
+.pop-dishes .dish-card-container .card-img:hover .overlay {
+    opacity: 1;
+}
+.pop-dishes .dish-card-container .card-img .overlay i {
+    width: 50px; height: 50px;
+    border-radius: 50%; border-width: 0px;
+    background-color: rgba(0, 0, 0, 0.8); color: white;
+    font-size: 22px;
+    outline: 0;
+    cursor: pointer;
+    display: flex; justify-content: center; align-items: center;
+}
+.pop-dishes .dish-card-container .card-img .overlay a {
+    font-family: "Open Sans";
+    font-size: 12px; font-weight: normal;
+    text-transform: uppercase;
+}
+
 .pop-dishes .dish-card-container .dish-card span {
     display: block; width: 100%;
     font-size: 18px; font-family: "Open Sans";

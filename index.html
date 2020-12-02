@@ -89,11 +89,28 @@
 
                         <div class="dish-card-container">
                             <div class="dish-card"
-                                v-for="dish in dishes"
+                                v-for="(dish, index) in dishes"
                                 v-if="dish.popular">
-                                <img :src="dish.imgSrc" :alt="dish.name">
+
+                                <div class="card-img">
+                                    <img :src="dish.imgSrc" :alt="dish.name">
+
+                                    <div class="overlay">
+                                        <i
+                                            class="far"
+                                            :class="dish.quantity ? 'fa-check-square' : 'fa-square'"
+                                            @click="toggleCart(dish.quantity, index)">
+                                        </i>
+
+                                        <span>
+                                            <a href="#">view cart</a>
+                                        </span>
+                                    </div><!-- end overlay -->
+                                </div><!-- end card-img -->
+
                                 <h4>{{ dish.name }}</h4>
                                 <span>{{ stampPrices(dish.prices) }}</span>
+
                             </div>
                         </div><!-- end card-container -->
 

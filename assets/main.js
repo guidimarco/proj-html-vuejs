@@ -221,7 +221,14 @@ var app = new Vue({
                 thisPrice = "$ " + min + " - $ " + max;
             }
             return thisPrice;
-        },
+        }, // return price-string
+        toggleCart: function(currentQuantity, dishIndex) {
+            if (currentQuantity == 0) {
+                this.dishes[dishIndex].quantity = 1;
+            } else if (currentQuantity == 1) {
+                this.dishes[dishIndex].quantity = 0;
+            }
+        }, // add the first (remove) item to cart
     }
 
 
