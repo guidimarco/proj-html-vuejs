@@ -37,7 +37,8 @@ h2 { /* main-title */
 }
 /* h3 app */
 h4 { /* dish-title, news-title */
-    font-size: 32px;
+    font-size: 32px; font-weight: normal;
+    text-transform: capitalize; text-align: center;
     color: #555454;
 }
 h5 { /* footer form title */
@@ -190,9 +191,17 @@ section.pop-dishes {
     margin: 20px 0;
 }
 .pop-dishes .dish-card-container .dish-card {
-    background-color: blue;
-    height: 100px;
     flex-grow: 1;
+    padding: 15px;
+}
+.pop-dishes .dish-card-container .dish-card img {
+    width: 100%;
+}
+.pop-dishes .dish-card-container .dish-card span {
+    display: block; width: 100%;
+    font-size: 18px; font-family: "Open Sans";
+    text-align: center;
+    color: #cc1a26;
 }
 
 /* #/2-fold section.pop-dishes*/

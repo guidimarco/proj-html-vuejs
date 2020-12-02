@@ -5,6 +5,7 @@ var app = new Vue({
         dishes: [
             {
                 name: "skin on fries", // dish name
+                imgSrc: "assets/img/dishes/skin-on-fries-400x571.jpg", // cover-img src
                 info: {
                     vegetarian: true,
                     glutenFree: true,
@@ -33,6 +34,7 @@ var app = new Vue({
             }, // skin on fries
             {
                 name: "choco cookie frappe", // dish name
+                imgSrc: "assets/img/dishes/choco-cookie-frappe-400x571.jpg", // cover-img src
                 info: {
                     vegetarian: true,
                     glutenFree: true,
@@ -53,6 +55,7 @@ var app = new Vue({
             }, // choco cookie frappe
             {
                 name: "the donut burger", // dish name
+                imgSrc: "assets/img/dishes/donut-burger-400x571.jpg", // cover-img src
                 info: {
                     vegetarian: false,
                     glutenFree: false,
