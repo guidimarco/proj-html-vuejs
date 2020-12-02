@@ -38,13 +38,13 @@
                     <nav class="header-menu">
                         <ul>
                             <li
-                                v-for="item in htmlNavMenu[0].submenu"
-                                v-if="item.name != 'alternate home'"
-                                :class="item.name == 'home' ? 'active drowpdown-symb' : ''">
-                                <a :href="item.href"
-                                    v-if="item.name != 'cart'">{{ item.name }}</a>
-                                <!-- cart symbol -->
-                                <a href="#" v-else>
+                                v-for="(item, key) in navMenu.navigate"
+                                v-if="key != 'alternate home'"
+                                :class="key == 'home' ? 'active drowpdown-symb' : ''">
+                                <a :href="key.href"
+                                    v-if="key != 'cart'">{{ key }}</a>
+
+                                <a :href="key.href" v-else>
                                     <i class='fas fa-shopping-cart'></i>
                                 </a>
                             </li>
@@ -98,7 +98,12 @@
 
                 <!-- section: voucher discount -->
                 <section class="voucher">
-                    <div class="container"></div>
+                    <svg class="fusion-waves-opacity-candy" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 1 1024 216" preserveAspectRatio="none">
+                        <path fill-opacity="0.1" class="st0" d="M0 215.4c19.4.5 38.7 1.6 57.7.3 206.6-15 248.5-126.6 455-143.8 184.8-15.5 285.7 60.9 464.3 41.3 16.9-1.8 32.5-4.4 47.1-7.6L1024 .4H0v215z"/>
+                        <path fill-opacity="0.3" class="st1" d="M0 196.4c30.2 1.6 59.6 1.6 86.8-.4C293.4 180.9 284.1 73.4 490.7 56.2c184.9-15.5 278.5 58.2 457.1 38.4 28.3-3.2 53.5-8.2 76.2-14.6V.256H0V196.4z"/>
+                        <path fill-opacity="0.5" class="st2" d="M0 169.8c22.2.3 43.8-.2 64.2-1.7C270.8 153.1 262 55.6 468.6 38.4 653.4 22.9 695.4 89.5 874 69.7c54.8-6 104.9-18.3 150-33.7V.256H0V169.8z"/>
+                        <path fill-opacity="1" class="st3" d="M0 162.1c4-.2 8-.4 11.9-.7C218.4 146.3 239.8 37 446.4 19.8 631.3 4.3 672.7 60.9 851.3 41.1c64-7.2 121.9-20.8 172.7-37.9V.156H0V162.1z"/>
+                    </svg>
                 </section>
 
                 <!-- section: menu -->
@@ -163,30 +168,31 @@
                     <nav class="footer-menu">
                         <ul>
                             <li><!-- order online -->
-                                {{ htmlNavMenu[0].submenu[2].name }}
+                                order online
                                 <ul>
                                     <li
-                                        v-for="item in htmlNavMenu[0].submenu[2].submenu">
-                                        <a :href="item.href">{{ item.name }}</a>
+                                        v-for="(item, key) in navMenu.navigate['order online'].submenu">
+                                        <a :href="item.href">{{ key }}</a>
                                     </li>
                                 </ul><!-- END submenu -->
                             </li>
                             <li><!-- navigate -->
-                                {{ htmlNavMenu[0].name }}
+                                navigate
                                 <ul>
                                     <li
-                                        v-for="item in htmlNavMenu[0].submenu"
-                                        :class="item.name == 'home' ? 'active' : ''">
-                                        <a :href="item.href">{{ item.name != 'order online' ? item.name : 'menu' }}</a>
+                                        v-for="(item, key) in navMenu.navigate"
+                                        :class="key == 'home' ? 'active' : ''">
+                                        <a :href="item.href">{{ key != 'order online' ? key : 'menu' }}</a>
                                     </li>
-                                </ul><!-- END submenu -->
+                                </ul>
+                                <!-- END submenu -->
                             </li>
                             <li><!-- information -->
-                                {{ htmlNavMenu[1].name }}
+                                information
                                 <ul>
                                     <li
-                                        v-for="item in htmlNavMenu[1].submenu">
-                                        <a :href="item.href">{{ item.name }}</a>
+                                        v-for="(item, key) in navMenu.information">
+                                        <a :href="item.href">{{ key }}</a>
                                     </li>
                                     <!-- app link imgs -->
                                     <li class="app-link">
@@ -202,23 +208,23 @@
                                 </ul>
                             </li>
                             <li><!-- opening hours -->
-                                {{ htmlNavMenu[2].name }}
+                                opening hours
                                 <ul>
                                     <li
-                                        v-for="item in htmlNavMenu[2].submenu">
-                                        <a :href="item.href">{{ item.day }}</a>
+                                        v-for="(item, key) in navMenu['opening hours']">
+                                        {{ key }} - {{ item.opening }} to {{ item.closing }}
                                     </li>
                                 </ul>
                             </li>
                             <li><!-- voucher -->
-                                {{ htmlNavMenu[3].name }}
+                                voucher
                                 <ul>
                                     <li
-                                        v-for="item in htmlNavMenu[3].submenu"
-                                        :class="item.name == 'first order' ? 'first-order' : ''">
-                                        <img v-if="item.imgSrc" :src="item.imgSrc" :alt="item.name">
-                                        <a :href="item.href"
-                                            v-if="item.name != 'first order'">{{ item.name }}</a>
+                                        v-for="(item, key) in navMenu.voucher"
+                                        :class="key == 'first order' ? 'first-order' : ''">
+                                        <img v-if="item.imgSrc" :src="item.imgSrc" :alt="key">
+                                        <a :href="key.href"
+                                            v-if="key != 'first order'">{{ key }}</a>
                                         <p v-else>
                                             just use the code <span class="highlight">firstorder</span><br/> at checkout
                                         </p>

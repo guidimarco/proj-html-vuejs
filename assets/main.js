@@ -26,123 +26,116 @@ var app = new Vue({
         news: [
             {
                 title: "titolo", // title string
-                article: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." // article string
+                article: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", // article string
+                date: "day",
             }, // single-news-obj
         ], // all news: array of new-obj
-        htmlNavMenu: [
-            { // NAV MENU
-                name: "navigate",
-                submenu: [ // MAIN MENU
-                    {
-                        name: "home",
-                        href: "#",
+        navMenu: {
+            "navigate": {
+                "home": {
+                    href: "#",
+                },
+                "alternate home": {
+                    href: "#",
+                },
+                "order online": {
+                    href: "#",
+                    submenu: { // menu-categories submenu
+                        "appetizers": {
+                            href: "#",
+                            imgSrc: "",
+                        },
+                        "burgers": {
+                            href: "#",
+                            imgSrc: "",
+                        },
+                        "pizzas": {
+                            href: "#",
+                            imgSrc: "",
+                        },
+                        "fries": {
+                            href: "#",
+                            imgSrc: "",
+                        },
+                        "sides": {
+                            href: "#",
+                            imgSrc: "",
+                        },
+                        "desserts": {
+                            href: "#",
+                            imgSrc: "",
+                        },
+                        "beverages": {
+                            href: "#",
+                            imgSrc: "",
+                        },
+                        "specials": {
+                            href: "#",
+                            imgSrc: "",
+                        },
                     },
-                    {
-                        name: "alternate home",
-                        href: "#",
-                    },
-                    {
-                        name: "order online",
-                        href: "#",
-                        submenu: [ // MENU-CATEGORIES
-                            {
-                                name: "appetizers",
-                                href: "#",
-                                imgSrc: "",
-                            },
-                            {
-                                name: "burgers",
-                                href: "#",
-                                imgSrc: "",
-                            },
-                            {
-                                name: "pizzas",
-                                href: "#",
-                                imgSrc: "",
-                            },
-                            {
-                                name: "fries",
-                                href: "#",
-                                imgSrc: "",
-                            },
-                            {
-                                name: "sides",
-                                href: "#",
-                                imgSrc: "",
-                            },
-                            {
-                                name: "desserts",
-                                href: "#",
-                                imgSrc: "",
-                            },
-                            {
-                                name: "beverages",
-                                href: "#",
-                                imgSrc: "",
-                            },
-                            {
-                                name: "specials",
-                                href: "#",
-                                imgSrc: "",
-                            },
-                        ],
-                    },
-                    {
-                        name: "about",
-                        href: "#",
-                    },
-                    {
-                        name: "news",
-                        href: "#",
-                    },
-                    {
-                        name: "contact us",
-                        href: "#",
-                    },
-                    {
-                        name: "cart",
-                        href: "#",
-                    },
-                ],
+                },
+                "about": {
+                    href: "#",
+                },
+                "news": {
+                    href: "#",
+                },
+                "contact us": {
+                    href: "#",
+                },
+                "cart": {
+                    href: "#",
+                },
+            }, // end nav-menu
+            "information": {
+                "my account": {
+                    href: "#",
+                },
+                "terms of service": {
+                    href: "#",
+                },
+                "privacy policy": {
+                    href: "#",
+                },
+            }, // end info-menu
+            "opening hours": {
+                "mon": {
+                    "opening": "10am",
+                    "closing": "11pm",
+                },
+                "tue": {
+                    "opening": "10am",
+                    "closing": "11pm",
+                },
+                "wed": {
+                    "opening": "10am",
+                    "closing": "11pm",
+                },
+                "thur": {
+                    "opening": "10am",
+                    "closing": "11pm",
+                },
+                "fri": {
+                    "opening": "10am",
+                    "closing": "11pm",
+                },
+                "sat": {
+                    "opening": "10am",
+                    "closing": "1am",
+                },
+                "sun": {
+                    "opening": "11am",
+                    "closing": "10pm",
+                },
+            }, // end opening-hours-menu
+            "voucher": {
+                "first order": {
+                    href: "#",
+                    imgSrc: "assets/img/first_order/footer-coupon-200x200.png",
+                },
             },
-            { // INFO MENU
-                name: "information",
-                submenu: [
-                    {
-                        name: "my account",
-                        href: "#",
-                    },
-                    {
-                        name: "terms of service",
-                        href: "#",
-                    },
-                    {
-                        name: "privacy policy",
-                        href: "#",
-                    },
-                ],
-            },
-            { // OPENING HOURS MENU
-                name: "opening hours",
-                submenu: [ // SUBMENU: DAY, OPENING HOURS
-                    {
-                        day: "monday",
-                        openingTime: "12",
-                        closingTime: "18",
-                    },
-                ],
-            },
-            { // VOUCHER MENU
-                name: "voucher",
-                submenu: [
-                    {
-                        name: "first order",
-                        href: "#",
-                        imgSrc: "assets/img/first_order/footer-coupon-200x200.png",
-                    },
-                ],
-            },
-        ], // <-- END htmlNavMenu
+        }, // <-- END all navMenu
     },
     methods: { // for function
 
