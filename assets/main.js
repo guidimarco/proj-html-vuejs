@@ -231,6 +231,8 @@ var app = new Vue({
                 },
             },
         }, // <-- END all navMenu
+
+        userMail: "",
     },
     methods: { // for function
         stampPrices: function(pricesArray) {
