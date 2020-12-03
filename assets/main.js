@@ -87,6 +87,7 @@ var app = new Vue({
                 img: "assets/img/news/new-milkshake-menu-800x600.jpg",
             }, // new milk shake menu
         ], // all news: array of new-obj
+
         navMenu: {
             "navigate": {
                 "home": {

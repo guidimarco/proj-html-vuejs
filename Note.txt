@@ -17,14 +17,13 @@ MILESTONE
 
 	milestone 4
 		2/12
-		HTML-CSS stilare restanti sezioni
-		CSS Stilare le card menu e piatti
+		X	HTML-CSS stilare restanti sezioni
+		X	CSS Stilare le card menu e piatti
 
 	milestone 5
 		3/12
 		X	HTML-JS inserire date nel submenu opening hours e renderizzate l'orario corretto
-		HTML-JS inserire classe active dinamicamente nel menu header e footer
-		HTML-JS inserire dish e stampare i most popular
+		X	HTML-JS inserire dish e stampare i most popular
 		HTML-JS inserire news e stamparle
 
 	milestone 6
