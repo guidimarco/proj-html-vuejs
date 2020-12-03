@@ -190,8 +190,14 @@
 
                         <div class="news-container">
                             <div class="single-news"
-                                v-for="i in 2">
-                                
+                                v-for="newsObj in news.slice(0, 2)">
+                                <div class="img-container">
+                                    <img :src="newsObj.img" :alt="newsObj.title">
+                                    
+                                    <div class="overlay"></div>
+                                </div>
+                                <h4>{{ newsObj.title }}</h4>
+                                <p>{{ newsObj.article.substring(0, 138) }}</p>
                             </div>
                         </div><!-- end news-container -->
                     </div>
