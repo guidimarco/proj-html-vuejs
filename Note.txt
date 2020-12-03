@@ -24,11 +24,13 @@ MILESTONE
 		3/12
 		X	HTML-JS inserire date nel submenu opening hours e renderizzate l'orario corretto
 		X	HTML-JS inserire dish e stampare i most popular
-		HTML-JS inserire news e stamparle
+		X	HTML-JS inserire news e stamparle
 
 	milestone 6
 		3/12
 		X	HTML-CSS ritocchi: footer menu opening hours
+
+
 LAYOUT
 HEADER
 	.container
