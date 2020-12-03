@@ -193,7 +193,7 @@
                                 v-for="newsObj in news.slice(0, 2)">
                                 <div class="img-container">
                                     <img :src="newsObj.img" :alt="newsObj.title">
-                                    
+
                                     <div class="overlay"></div>
                                 </div>
                                 <h4>{{ newsObj.title }}</h4>
@@ -251,10 +251,10 @@
                             </li>
                             <li><!-- opening hours -->
                                 opening hours
-                                <ul>
+                                <ul class="opening-hours">
                                     <li
                                         v-for="(item, key) in navMenu['opening hours']">
-                                        {{ key }} - {{ item.opening }} to {{ item.closing }}
+                                        {{ key }} - <span class="highlight">{{ item.opening }} to {{ item.closing }}</span>
                                     </li>
                                 </ul>
                             </li>

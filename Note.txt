@@ -28,9 +28,7 @@ MILESTONE
 
 	milestone 6
 		3/12
-		HTML-CSS ritocchi: footer menu opening hours, input footer
-		JS ordinare array prezzi
-
+		X	HTML-CSS ritocchi: footer menu opening hours
 LAYOUT
 HEADER
 	.container
