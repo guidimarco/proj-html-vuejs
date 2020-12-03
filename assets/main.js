@@ -2,6 +2,7 @@
 var app = new Vue({
     el: "#root",
     data: {
+        // menu data
         dishes: [
             {
                 name: "skin on fries", // dish name
@@ -75,6 +76,40 @@ var app = new Vue({
                 popular: true,
             }, // donut burger
         ], // all dishes: array of dish-obj
+        allergies: {
+            "vegetarian": {
+                imgSrc: "assets/img/allergy/vegetarian.png",
+            },
+            "gluten free": {
+                imgSrc: "assets/img/allergy/gluten.png",
+            },
+            "dairy free": {
+                imgSrc: "assets/img/allergy/dairy.png",
+            },
+            "keto friendly": {
+                imgSrc: "assets/img/allergy/keto.png",
+            },
+        }, // <-- END allergy and intollerance-info
+        restFeatures: [
+            {
+                icon: "far fa-clock",
+                text: "24/7 delivery",
+            },
+            {
+                icon: "fas fa-hamburger",
+                text: "over 100 dishes",
+            },
+            {
+                icon: "fas fa-mobile-alt",
+                text: "in app ordering",
+            },
+            {
+                icon: "fas fa-car",
+                text: "fast delivery",
+            },
+        ], // <-- END icon restaurant features
+
+        // news data
         news: [
             {
                 title: "the pancake burger", // title string
@@ -88,6 +123,8 @@ var app = new Vue({
             }, // new milk shake menu
         ], // all news: array of new-obj
 
+        // menu data
+        mobMenuHidden: true, // show-hidden hamburger menu
         navMenu: {
             "navigate": {
                 "home": {
@@ -194,38 +231,6 @@ var app = new Vue({
                 },
             },
         }, // <-- END all navMenu
-        restFeatures: [
-            {
-                icon: "far fa-clock",
-                text: "24/7 delivery",
-            },
-            {
-                icon: "fas fa-hamburger",
-                text: "over 100 dishes",
-            },
-            {
-                icon: "fas fa-mobile-alt",
-                text: "in app ordering",
-            },
-            {
-                icon: "fas fa-car",
-                text: "fast delivery",
-            },
-        ], // <-- END icon restaurant features
-        allergies: {
-            "vegetarian": {
-                imgSrc: "assets/img/allergy/vegetarian.png",
-            },
-            "gluten free": {
-                imgSrc: "assets/img/allergy/gluten.png",
-            },
-            "dairy free": {
-                imgSrc: "assets/img/allergy/dairy.png",
-            },
-            "keto friendly": {
-                imgSrc: "assets/img/allergy/keto.png",
-            },
-        }, // <-- END allergy and intollerance-info
     },
     methods: { // for function
         stampPrices: function(pricesArray) {

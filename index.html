@@ -27,7 +27,7 @@
 
     <body>
         <div id="root">
-            <header>
+            <header :class="mobMenuHidden ? '' : 'show'">
                 <div class="container">
                     <!-- LEFT logo -->
                     <div class="header-logo">
@@ -36,7 +36,7 @@
 
                     <!-- RIGHT nav -->
                     <nav class="header-menu">
-                        <ul>
+                        <ul :class="mobMenuHidden ? '' : 'show'">
                             <li
                                 v-for="(item, key) in navMenu.navigate"
                                 v-if="key != 'alternate home'"
@@ -52,7 +52,10 @@
 
                         <!-- hamburger-menu-icon -->
                         <div class="hamburger-menu">
-                            <i class="fas fa-bars fa-2x"></i>
+                            <i class="fas fa-2x"
+                                :class="mobMenuHidden ? 'fa-bars' : 'fa-times'"
+                                @click="mobMenuHidden = !mobMenuHidden">
+                            </i>
                         </div>
                     </nav>
                 </div><!-- END container -->
