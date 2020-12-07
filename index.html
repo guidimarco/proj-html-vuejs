@@ -27,7 +27,7 @@
 
     <body>
         <div id="root">
-            <header :class="mobMenuHidden ? '' : 'show'">
+            <header>
                 <div class="container">
                     <!-- LEFT logo -->
                     <div class="header-logo">
@@ -41,10 +41,10 @@
                                 v-for="(item, key) in navMenu.navigate"
                                 v-if="key != 'alternate home'"
                                 :class="key == 'home' ? 'active drowpdown-symb' : ''">
-                                <a :href="key.href"
+                                <a :href="item.href"
                                     v-if="key != 'cart'">{{ key }}</a>
 
-                                <a :href="key.href" v-else>
+                                <a :href="item.href" v-else>
                                     <i class='fas fa-shopping-cart'></i>
                                 </a>
                             </li>
@@ -192,15 +192,27 @@
                         </div><!-- END title -->
 
                         <div class="news-container">
+                            <!-- arrow left carousel -->
+                            <div class="arrow"
+                                @click="prevNews">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+
                             <div class="single-news"
-                                v-for="newsObj in news.slice(0, 2)">
+                                v-for="(news, index) in news">
                                 <div class="img-container">
-                                    <img :src="newsObj.img" :alt="newsObj.title">
+                                    <img :src="news.img" :alt="news.title">
 
                                     <div class="overlay"></div>
                                 </div>
-                                <h4>{{ newsObj.title }}</h4>
-                                <p>{{ newsObj.article.substring(0, 138) }}</p>
+                                <h4>{{ news.title }}</h4>
+                                <p>{{ news.article.substring(0, 138) }}</p>
+                            </div>
+
+                            <!-- arrow right carousel -->
+                            <div class="arrow"
+                                @click="nextNews">
+                                <i class="fas fa-arrow-right"></i>
                             </div>
                         </div><!-- end news-container -->
                     </div>

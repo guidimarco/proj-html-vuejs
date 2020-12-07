@@ -121,6 +121,16 @@ var app = new Vue({
                 article: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", // article string
                 img: "assets/img/news/new-milkshake-menu-800x600.jpg",
             }, // new milk shake menu
+            {
+                title: "new random news #1", // title string
+                article: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", // article string
+                img: "https://picsum.photos/800/600",
+            }, // new random news #1
+            {
+                title: "new random news #2", // title string
+                article: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", // article string
+                img: "https://picsum.photos/800/600",
+            }, // new random news #2
         ], // all news: array of new-obj
 
         // menu data
@@ -256,7 +266,39 @@ var app = new Vue({
                 this.dishes[dishIndex].quantity = 0;
             }
         }, // add the first (remove) item to cart
-    }
 
+        // news function
+        sortNews: function() {
+            this.news.sort( (a, b) => {
+                return a.order - b.order;
+            });
+        }, // sort the news (from order property)
+        nextNews: function() {
+            this.news.forEach( (news) => {
+                if (news.order == 0) {
+                    news.order = this.news.length - 1;
+                } else {
+                    news.order -= 1;
+                }
+            });
+            this.sortNews();
+        }, // move to next news
+        prevNews: function() {
+            this.news.forEach( (news) => {
+                if (news.order == this.news.length - 1) {
+                    news.order = 0;
+                } else {
+                    news.order += 1;
+                }
+            });
+            this.sortNews();
+        }, // move to prev news
+    },
+    mounted: function() {
+        // add order property for sort the news
+        this.news.forEach( (item, i) => {
+            item.order = i;
+        });
+    },
 
 });
