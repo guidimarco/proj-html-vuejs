@@ -110,6 +110,7 @@ var app = new Vue({
         ], // <-- END icon restaurant features
 
         // news data
+        currentNews: 0,
         news: [
             {
                 title: "the pancake burger", // title string
@@ -281,6 +282,8 @@ var app = new Vue({
                     news.order -= 1;
                 }
             });
+            this.currentNews += 1;
+            this.currentNews = this.currentNews % this.news.length;
             this.sortNews();
         }, // move to next news
         prevNews: function() {
@@ -291,8 +294,23 @@ var app = new Vue({
                     news.order += 1;
                 }
             });
+            this.currentNews = this.currentNews -1 + this.news.length;
+            this.currentNews = this.currentNews % this.news.length;
             this.sortNews();
         }, // move to prev news
+        changeNews: function(index) {
+            let difference = this.currentNews - index;
+            let totNews = this.news.length;
+
+            if (difference != 0) {
+                this.currentNews = index;
+                this.news.forEach( (news) => {
+                    news.order = news.order + difference + totNews;
+                    news.order = news.order % this.news.length;
+                });
+                this.sortNews();
+            }
+        }, // change to n-news
     },
     mounted: function() {
         // add order property for sort the news
